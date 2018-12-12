@@ -8,7 +8,7 @@ const test11 = (fruit) => {
 };
 
 const test12 = (fruit) => {
-  // 把条件提取到数组中
+  // 把条件提取到数组中 Array.includes()函数判断是否包含某一元素 它直接返回true或者false表示是否包含元素，对NaN一样能有有效
   const redFruits = ['苹果', '草莓', '樱桃', '红梅'];
 
   if (redFruits.includes(fruit)) {
