@@ -1,7 +1,7 @@
 // 5.使用 Array.every 和 Array.some 来处理全部/部分满足条件
 
 // JavaScript 数组函数来减少代码行数
-const fruits = [
+const fts = [
   { name: 'apple', color: 'red' },
   { name: 'banana', color: 'yellow' },
   { name: 'grape', color: 'purple' }
@@ -10,7 +10,7 @@ const fruits = [
 const test51 = () => {
   let isAllRed = true;
   // 条件：所有的水果都必须是红色
-  for (const f of fruits) {
+  for (const f of fts) {
     if (!isAllRed) break;
     isAllRed = (f.color === 'red');
   }
@@ -22,7 +22,7 @@ const test51 = () => {
 // every():方法用于检测数组中所有元素是否【都符合指定】条件，若符合返回true，否则返回false；
 const test52 = () => {
   // 条件：（简短形式）所有的水果都必须是红色
-  const isAllRed = fruits.every(f => f.color === 'red');
+  const isAllRed = fts.every(f => f.color === 'red');
 
   console.log(isAllRed); // false
 };
@@ -31,7 +31,7 @@ const test52 = () => {
 // some():方法用于检测数组中的元素是否【有满足指定】条件的，若满足返回true，否则返回false；
 const test53 = () => {
   // 条件：至少一个水果是红色的
-  const isAnyRed = fruits.some(f => f.color === 'red');
+  const isAnyRed = fts.some(f => f.color === 'red');
 
   console.log(isAnyRed); // true
 };

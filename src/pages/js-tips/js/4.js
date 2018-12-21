@@ -17,28 +17,28 @@ const test41 = (color) => {
 
 
 // 使用对象字面量来找到对应颜色的水果
-const fruitColor1 = {
+const ftColor1 = {
   red: ['苹果', '草莓'],
   yellow: ['香蕉', '菠萝'],
   purple: ['葡萄', '李子']
 };
 
 const test42 = (color) => {
-  return fruitColor1[color] || [];
+  return ftColor1[color] || [];
 };
 
 // 使用 Map 来找到对应颜色的水果  Map 是 ES2015 引入的新的对象类型，允许你存放键值对。
-const fruitColor2 = new Map()
+const ftColor2 = new Map()
   .set('red', ['苹果', '草莓'])
   .set('yellow', ['香蕉', '菠萝'])
   .set('purple', ['葡萄', '李子']);
 
 const test43 = (color) => {
-  return fruitColor2.get(color) || [];
+  return ftColor2.get(color) || [];
 };
 
 // 重构语法
-const fruits = [
+const fts = [
   { name: '苹果', color: 'red' },
   { name: '草莓', color: 'red' },
   { name: '香蕉', color: 'yellow' },
@@ -49,7 +49,7 @@ const fruits = [
 
 function test44(color) {
   // 使用 Array filter 来找到对应颜色的水果
-  return fruits.filter(f => f.color === color);
+  return fts.filter(f => f.color === color);
 }
 
 // 测试结果

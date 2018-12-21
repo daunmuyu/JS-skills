@@ -1,12 +1,12 @@
 
 // 2. 少写嵌套，尽早返回
-const test21 = (fruit, q) => {
-  const redFruits = ['苹果', '草莓', '樱桃', '红梅'];
+const test21 = (ft, q) => {
+  const redFts = ['苹果', '草莓', '樱桃', '红梅'];
 
-  // 条件 1：fruit 必须有值
-  if (fruit) {
+  // 条件 1：ft 必须有值
+  if (ft) {
     // 条件 2：必须为红色
-    if (redFruits.includes(fruit)) {
+    if (redFts.includes(ft)) {
       console.log('red');
 
       // 条件 3：必须是大量存在
@@ -24,14 +24,14 @@ const test21 = (fruit, q) => {
 // 遵循的一个总的规则是当发现无效条件时尽早返回。
 // /_ 当发现无效条件时尽早返回 _/
 
-const test22 = (fruit, q) => {
-  const redFruits = ['苹果', '草莓', '樱桃', '红梅'];
+const test22 = (ft, q) => {
+  const redFts = ['苹果', '草莓', '樱桃', '红梅'];
 
   // 条件 1：尽早抛出错误
-  if (!fruit) throw new Error('不是水果!');
+  if (!ft) throw new Error('不是水果!');
 
   // 条件2：必须为红色
-  if (redFruits.includes(fruit)) {
+  if (redFts.includes(ft)) {
     console.log('red');
 
     // 条件 3：必须是大量存在
@@ -44,11 +44,11 @@ const test22 = (fruit, q) => {
 
 // 如果反转一下条件，我们还可以进一步地减少嵌套层级。注意观察下面的条件 2 语句，看看是如何做到这点的
 // /_ 当发现无效条件时尽早返回 _/
-const test23 = (fruit, q) => {
-  const redFruits = ['苹果', '草莓', '樱桃', '红梅'];
+const test23 = (ft, q) => {
+  const redFts = ['苹果', '草莓', '樱桃', '红梅'];
 
-  if (!fruit) throw new Error('不是水果!'); // 条件 1：尽早抛出错误
-  if (!redFruits.includes(fruit)) return; // 条件 2：当 fruit 不是红色的时候，直接返回
+  if (!ft) throw new Error('不是水果!'); // 条件 1：尽早抛出错误
+  if (!redFts.includes(ft)) return; // 条件 2：当 ft 不是红色的时候，直接返回
 
   console.log('red');
 
